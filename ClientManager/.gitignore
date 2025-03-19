@@ -1,0 +1,38 @@
+# Игнорируем папку сборки
+build/
+
+# Игнорируем файлы Visual Studio
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+.vs/
+Debug/
+Release/
+
+# Игнорируем скомпилированные файлы
+*.exe
+*.obj
+*.lib
+*.dll
+*.pdb
+
+# Игнорируем временные файлы
+*.swp
+*.swo
+*.log
+*.tmp
+
+# Игнорируем файлы CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Игнорируем зависимости (libpqxx)
+libpqxx-master/
+
+# Игнорируем локальные конфигурации
+.vscode/
+.idea/
+out/
