@@ -1,0 +1,27 @@
+# Visual Studio
+.vs/
+*.vcxproj*
+*.sln
+*.user
+*.suo
+*.ncb
+*.opendb
+
+# Build output
+Debug/
+Release/
+x64/
+x86/
+*.obj
+*.exe
+*.pdb
+*.log
+*.idb
+*.ipch
+*.ilk
+
+# Other
+*.db
+*.cache
+*.pyc
+*.DS_Store
