@@ -1,0 +1,5 @@
+FROM clang:latest
+WORKDIR /app
+COPY queue.cpp .
+RUN clang++ -std=c++17 queue.cpp -o queue_clang
+CMD ["./queue_clang"]
