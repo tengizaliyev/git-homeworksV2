@@ -1,0 +1,25 @@
+# Build results
+*.obj
+*.exe
+*.pdb
+*.idb
+*.dll
+*.log
+*.tmp
+*.bak
+
+# Visual Studio cache
+.vs/
+*.VC.db
+*.VC.opendb
+
+# User-specific
+*.user
+*.suo
+
+# Debug / Release folders
+Debug/
+Release/
+x64/
+x86/
+ipch/
