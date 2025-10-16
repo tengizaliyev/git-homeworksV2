@@ -1,0 +1,40 @@
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.VC.db
+*.VC.opendb
+
+# Build directories
+Debug/
+Release/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Backup & temp
+*.log
+*.tmp
+*.bak
+*.ncb
+*.opendb
+
+# Auto-generated files
+*.tlog
+*.idb
+*.pdb
+*.ipch
+*.ilk
+
+# Others
+*.exe
+*.dll
+*.lib
+*.obj
+*.pch
