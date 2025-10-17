@@ -3,7 +3,7 @@
 template <typename T>
 class MyUniquePtr {
 private:
-    T* ptr; 
+    T* ptr;
 
 public:
     explicit MyUniquePtr(T* p = nullptr) : ptr(p) {}
@@ -32,10 +32,14 @@ public:
     }
 
     T& operator*() const {
+        if (!ptr)
+            throw std::runtime_error("Attempt to dereference nullptr in MyUniquePtr");
         return *ptr;
     }
 
     T* operator->() const {
+        if (!ptr)
+            throw std::runtime_error("Attempt to access member through nullptr in MyUniquePtr");
         return ptr;
     }
 
@@ -45,9 +49,7 @@ public:
         return temp;
     }
 
-    T* get() const {
-        return ptr;
-    }
+    T* get() const { return ptr; }
 };
 
 class Test {
@@ -65,13 +67,12 @@ int main() {
 
         MyUniquePtr<Test> p2 = std::move(p1);
 
-        if (!p1.get()) {
+        if (!p1.get())
             std::cout << "p1 is empty after move\n";
-        }
 
         Test* raw = p2.release();
         std::cout << "Ownership released manually\n";
-        delete raw; 
+        delete raw;
     }
 
     std::cout << "[OUT]: program finished\n";
